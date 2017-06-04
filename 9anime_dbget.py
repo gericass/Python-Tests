@@ -6,8 +6,8 @@ import requests
 import json
 
 page2 = ["1/","2/"]
-year = ["2015/"]#,"2016/","2015/","2014/","2013/"]
-season = ["Winter/","Summer/"]#,"Spring/","Summer/","Fall/","Unknow/"]
+year = ["2017/"]#,"2016/","2015/","2014/","2013/"]
+season = ["Winter/","Summer/","Spring/","Summer/","Fall/","Unknow/"]
 page = ["1/","2/","3/","4/","5/"]
 
 
@@ -54,7 +54,7 @@ def dow():#曜日取得
                        print(i+j+k+m+" error")
     print(time.time()-start)
 
-#gettitle()
+gettitle()
 #dow()
 
 

@@ -8,12 +8,9 @@ response = urllib.request.urlopen(req)
 html = response.read()
 soup = BeautifulSoup(html, "lxml")
 
-
-
 artist = []
 title = []
 url = []
-
 
 for titw in soup.find_all(class_='works'):
     for name in titw.find_all(class_='name'):
