@@ -7,7 +7,7 @@ import json
 
 page2 = ["1/","2/"]
 year = ["2017/"]#,"2016/","2015/","2014/","2013/"]
-season = ["Winter/","Summer/","Spring/","Summer/","Fall/","Unknow/"]
+season = ["Winter/","Spring/","Summer/","Fall/","Unknow/"]
 page = ["1/","2/","3/","4/","5/"]
 
 
@@ -54,8 +54,8 @@ def dow():#曜日取得
                        print(i+j+k+m+" error")
     print(time.time()-start)
 
-gettitle()
-#dow()
+#gettitle()
+dow()
 
 
 
@@ -142,10 +142,10 @@ id3 = [
        'U582c93dbf5a97ab4affa4259f5068a33',
        'Ubf6cc15475b96604c7642a721acbe76b'
 ]
-
+'''
 for i in id3:
  USER_EP = USER_EP + i
  p = requests.get(USER_EP,headers=HEADER)
  print(p.text)
  USER_EP = 'https://api.line.me/v2/bot/profile/'
-
+'''
