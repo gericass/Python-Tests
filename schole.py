@@ -31,7 +31,6 @@ for art in preartist:
     if art != '':
         artist.append(art)
 
-
 #print(p)
 print(len(title))
 print(len(artist))
