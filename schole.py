@@ -9,27 +9,19 @@ soup = BeautifulSoup(html, "lxml")
 
 preartist = []
 
-artist = []
-title = []
-url = []
-
 p = soup.prettify()
 
-for vc in soup.find_all(class_="vc_col-sm-3"):
-    for a in vc.find_all("a"):
-        url.append(a['href'])
+url = [a['href'] for vc in soup.find_all(class_="vc_col-sm-3") for a in vc.find_all("a")]
+title = [strong.text for vc in soup.find_all(class_="vc_col-sm-3") for ptag in vc.find_all("p")  for strong in ptag.find_all("strong")]
 
+for vc in soup.find_all(class_="vc_col-sm-3"):
     for ptag in vc.find_all("p"):
         for strong in ptag.find_all("strong"):
-          title.append(strong.text)
           strong.extract()
-
         preartist.append(ptag.text.replace("\n",""))
 
+artist = [art for art in preartist if art != '']
 
-for art in preartist:
-    if art != '':
-        artist.append(art)
 
 #print(p)
 print(len(title))
