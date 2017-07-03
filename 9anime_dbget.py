@@ -1,13 +1,15 @@
 import urllib.request
 import time
-
-
 import requests
 import json
 
 page2 = ["1/","2/"]
-year = ["2015/"]#,"2016/","2015/","2014/","2013/"]
-season = ["Winter/","Summer/"]#,"Spring/","Summer/","Fall/","Unknow/"]
+year = ["2017/"]#,"2016/","2015/","2014/","2013/"]
+<<<<<<< HEAD
+season = ["Winter/","Summer/","Spring/","Summer/","Fall/","Unknow/"]
+=======
+season = ["Winter/","Spring/","Summer/","Fall/","Unknow/"]
+>>>>>>> 5373bfc14f678581fae687a052bc5aad36d0c28b
 page = ["1/","2/","3/","4/","5/"]
 
 
@@ -55,7 +57,7 @@ def dow():#曜日取得
     print(time.time()-start)
 
 #gettitle()
-#dow()
+dow()
 
 
 
@@ -125,6 +127,8 @@ id2 = [
     'Ubf6cc15475b96604c7642a721acbe76b'
 ]
 id3 = [
+       'U468864f7e6657f250d37d9b591f2d693',
+       'U796bda9ba404ebf881d5a41eb2b0be53',
        'Ucb4a52b33a2aa39263ab5b9ff72dd86a',
        'U646c48e6007f672ed2adc993eab06b20',
        'U1502e942cd44806b72d271394ccd8218',
@@ -142,10 +146,10 @@ id3 = [
        'U582c93dbf5a97ab4affa4259f5068a33',
        'Ubf6cc15475b96604c7642a721acbe76b'
 ]
-
+'''
 for i in id3:
  USER_EP = USER_EP + i
  p = requests.get(USER_EP,headers=HEADER)
  print(p.text)
  USER_EP = 'https://api.line.me/v2/bot/profile/'
-
+'''
