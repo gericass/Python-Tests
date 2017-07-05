@@ -7,7 +7,7 @@ response = urllib.request.urlopen(req)
 html = response.read()
 soup = BeautifulSoup(html, "lxml")
 
-preartist = []
+artist = []
 
 p = soup.prettify()
 
@@ -18,12 +18,13 @@ for vc in soup.find_all(class_="vc_col-sm-3"):
     for ptag in vc.find_all("p"):
         for strong in ptag.find_all("strong"):
           strong.extract()
-        preartist.append(ptag.text.replace("\n",""))
+        artist.append(ptag.text.replace("\n",""))
 
-artist = [art for art in preartist if art != '']
+#artist = [art for art in preartist if art != '']
 
+artist = list(filter(lambda x:x!='',artist))
 
 #print(p)
 print(len(title))
-print(len(artist))
+print(artist)
 print(len(url))
